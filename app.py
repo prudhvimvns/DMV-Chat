@@ -13,7 +13,7 @@ st.write("Upload a PDF and enter your OpenAI API Key to chat with the PDF.")
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
 # Add a text input for the OpenAI API key
-openai_api_key = st.text_input("Enter your OpenAI API Key")
+openai_api_key = st.text_input("Enter your OpenAI API Key",type='password')
 
 def extract_text_from_pdf(pdf_file):
     try:
