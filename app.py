@@ -6,7 +6,7 @@ from langchain.vectorstores import FAISS
 import os
 
 # Set Streamlit title and description
-st.title("DMV-Chat")
+st.title("DMV-Chat🚘")
 st.write("Enter your OpenAI API Key and ask questions about the default PDF file.")
 
 # Define the path to the default PDF file
