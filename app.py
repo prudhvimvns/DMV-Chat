@@ -6,14 +6,14 @@ from langchain.vectorstores import FAISS
 import os
 
 # Set Streamlit title and description
-st.title("PDF Chatbot with OpenAI")
-st.write("Upload a PDF and enter your OpenAI API Key to chat with the PDF.")
+st.title("DMV-Chat")
+st.write("Enter your OpenAI API Key and ask questions about the default PDF file.")
 
-# Add a file uploader for the PDF file
-uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
+# Define the path to the default PDF file
+default_pdf_path = 'dmv.pdf'  # Replace with the actual file path
 
 # Add a text input for the OpenAI API key
-openai_api_key = st.text_input("Enter your OpenAI API Key",type='password')
+openai_api_key = st.text_input("Enter your OpenAI API Key", type='password')
 
 def extract_text_from_pdf(pdf_file):
     try:
@@ -52,16 +52,16 @@ def chat_with_pdf(text, openai_key, query):
 user_question = st.text_input("Ask a question")
 
 if st.button("Chat"):
-    if uploaded_file is not None and openai_api_key and user_question:
-        pdf_text = extract_text_from_pdf(uploaded_file)
+    if openai_api_key and user_question:
+        pdf_text = extract_text_from_pdf(default_pdf_path)
         if pdf_text:
             result = chat_with_pdf(pdf_text, openai_api_key, user_question)
             if result:
                 st.write("Answer:", result)
         else:
-            st.warning("Unable to extract text from the PDF. Please check the PDF file.")
+            st.warning("Unable to extract text from the default PDF. Please check the file path.")
     else:
-        st.warning("Please upload a PDF file, provide an OpenAI API Key, and enter a question.")
+        st.warning("Please provide an OpenAI API Key and enter a question.")
 
 if __name__ == "__main__":
     st.set_option('deprecation.showfileUploaderEncoding', False)
