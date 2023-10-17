@@ -35,6 +35,14 @@ Question: What are the requirements for getting a driver's license in California
 
 Answer: To get a driver's license in California, you must be at least 16 years old, have a valid Social Security number, and pass a vision test, a written knowledge test, and a driving skills test. You must also provide proof of residency and proof of vehicle insurance.
 
+# Troubleshooting:
 
+If you are having trouble using the app, please check the following:
+
+Make sure that you have installed all of the required dependencies.
+Make sure that you have entered a valid OpenAI API key.
+Make sure that your question is clear and concise.
+Try asking your question in a different way.
+If you are still having trouble, please feel free to open an issue on GitHub.
 
 
