@@ -13,16 +13,28 @@ langchain
 
 # Installation:
 
-## Clone this repository:
+ 👉Clone this repository:
 
   git clone https://github.com/bard/dmv-chat.git
   
-## Install the required dependencies:
+ 👉Install the required dependencies:
 
   pip install -r requirements.txt
 
 # Usage:
 
 Start the Streamlit app:
+streamlit run app.py
+
+Enter your OpenAI API key in the text input box and click the "Submit" button.
+Ask your question in the text input box and click the "Chat" button.
+The chatbot will generate a response in the text box below.
+Example:
+
+Question: What are the requirements for getting a driver's license in California?
+
+Answer: To get a driver's license in California, you must be at least 16 years old, have a valid Social Security number, and pass a vision test, a written knowledge test, and a driving skills test. You must also provide proof of residency and proof of vehicle insurance.
+
+
 
 
