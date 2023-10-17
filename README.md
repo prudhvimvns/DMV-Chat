@@ -12,3 +12,7 @@ PyPDF2
 langchain
 
 # Installation:
+Clone this repository:
+  git clone https://github.com/bard/dmv-chat.git
+Install the required dependencies:
+  pip install -r requirements.txt
