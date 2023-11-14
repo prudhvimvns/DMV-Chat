@@ -7,7 +7,7 @@ import os
 
 # Set Streamlit title and description
 st.title("DMV-Chat🚘")
-st.write("Enter your OpenAI API Key and ask questions about the default PDF file.")
+st.write("Enter your OpenAI API Key 🔐 and ask questions about DMV🚗.")
 
 # Define the path to the default PDF file
 default_pdf_path = 'dmv.pdf'  # Replace with the actual file path
